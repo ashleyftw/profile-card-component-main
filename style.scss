@@ -46,7 +46,7 @@ body {
     flex-direction: column;
     background-color: white;
 
-    h1, h4 {
+    h1, h3 {
         color: var(--primary-vd-de-bl);
     }
     h2, p {
@@ -92,7 +92,7 @@ body {
         justify-content: space-around;
         border-top: 1px solid var(--neutral-dk-gr);
         padding: var(--pad-md) var(--pad-sm);
-        h4 {
+        h3 {
             font-size: var(--fs-base);
             font-weight: var(--fw-bold);
         }

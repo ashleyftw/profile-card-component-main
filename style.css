@@ -135,7 +135,7 @@ body .bg-bottom img {
   flex-direction: column;
   background-color: white;
 }
-.card h1, .card h4 {
+.card h1, .card h3 {
   color: var(--primary-vd-de-bl);
 }
 .card h2, .card p {
@@ -181,7 +181,7 @@ body .bg-bottom img {
   border-top: 1px solid var(--neutral-dk-gr);
   padding: var(--pad-md) var(--pad-sm);
 }
-.card__stats h4 {
+.card__stats h3 {
   font-size: var(--fs-base);
   font-weight: var(--fw-bold);
 }
