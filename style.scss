@@ -1,0 +1,100 @@
+@use 'scss/base/reset' as *;
+@use 'scss/base/colors' as *;
+@use 'scss/base/typography' as *;
+@use 'scss/base/spacer' as *;
+@use 'scss/abstracts/mixins' as *;
+
+body {
+    font-family: $ff;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: var(--neutral-dk-gr);
+    background-color: var(--primary-dk-cy);
+    position: relative;
+    
+    .bg-top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    .bg-bottom{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+        z-index: -1;
+    }
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    h1, h4 {
+        color: var(--primary-vd-de-bl);
+    }
+    h2, p {
+        color: var(--primary-dk-gr-bl);
+    }
+    &__profile {
+        padding: var(--pad-lg) var(--pad-xxxl);
+
+    }
+    &__pic {
+        background: url(images/bg-pattern-card.svg);
+        background-position: center;
+        padding: var(--pad-xxl) 0;
+        position: relative;
+
+        img {
+            border-radius: 50%;
+            border: 5px solid white;
+            position: absolute;
+            content: '';
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__profile {
+        padding: var(--pad-xxl) var(--pad-xxxl) var(--pad-base) ;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        h1 {
+            font-size: var(--fs-base);
+        }
+        h2 {
+            font-size: var(--fs-base);
+            font-weight: var(--fw-base);
+        }
+    }
+    &__location {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-base);
+    }
+    &__stats {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid var(--neutral-dk-gr);
+        padding: var(--pad-md) var(--pad-sm);
+        h4 {
+            font-size: var(--fs-base);
+            font-weight: var(--fw-bold);
+        }
+        p {
+            font-size: var(--fs-xs);
+            letter-spacing: 0.1rem;
+            font-weight: var(--fw-base);
+        }
+    }
+}
+

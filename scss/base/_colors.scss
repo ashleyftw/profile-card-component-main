@@ -1,0 +1,18 @@
+$colors: (
+    primary: (
+        dk-cy: hsl(185, 75%, 39%),
+        vd-de-bl: hsl(229, 23%, 23%),
+        dk-gr-bl: hsl(227, 10%, 46%)
+    ),
+    neutral: (
+        dk-gr: hsl(0, 0%, 59%)
+    )
+);
+
+:root {
+    @each $cat, $clrs in $colors {
+        @each $name, $clr in $clrs {
+            --#{$cat}-#{$name}: #{$clr};
+        }
+    }
+};

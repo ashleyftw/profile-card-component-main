@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"); /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --primary-dk-cy: hsl(185, 75%, 39%);
+  --primary-vd-de-bl: hsl(229, 23%, 23%);
+  --primary-dk-gr-bl: hsl(227, 10%, 46%);
+  --neutral-dk-gr: hsl(0, 0%, 59%);
+}
+
+:root {
+  --fs-xs: 0.6rem;
+  --fs-sm: 0.85rem;
+  --fs-base: 18px;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2rem;
+  --fw-base: 400;
+  --fw-bold: 700;
+}
+
+:root {
+  --mar-sm: 0.75em;
+  --mar-base: 1em;
+  --mar-md: 1.5em;
+  --mar-lg: 2em;
+  --mar-xl: 2.5em;
+  --mar-xxl: 3em;
+  --mar-xxxl: 3.5em;
+  --pad-sm: 0.75em;
+  --pad-base: 1em;
+  --pad-md: 1.5em;
+  --pad-lg: 2em;
+  --pad-xl: 2.5em;
+  --pad-xxl: 4.5em;
+  --pad-xxxl: 5.5em;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: var(--neutral-dk-gr);
+  background-color: var(--primary-dk-cy);
+  position: relative;
+}
+body .bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+body .bg-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  z-index: -1;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.card h1, .card h4 {
+  color: var(--primary-vd-de-bl);
+}
+.card h2, .card p {
+  color: var(--primary-dk-gr-bl);
+}
+.card__profile {
+  padding: var(--pad-lg) var(--pad-xxxl);
+}
+.card__pic {
+  background: url(images/bg-pattern-card.svg);
+  background-position: center;
+  padding: var(--pad-xxl) 0;
+  position: relative;
+}
+.card__pic img {
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__profile {
+  padding: var(--pad-xxl) var(--pad-xxxl) var(--pad-base);
+}
+.card__info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card__info h1 {
+  font-size: var(--fs-base);
+}
+.card__info h2 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+}
+.card__location {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-base);
+}
+.card__stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--neutral-dk-gr);
+  padding: var(--pad-md) var(--pad-sm);
+}
+.card__stats h4 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+}
+.card__stats p {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1rem;
+  font-weight: var(--fw-base);
+}/*# sourceMappingURL=style.css.map */

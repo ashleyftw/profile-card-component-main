@@ -1,0 +1,30 @@
+//margin
+$mar: (
+    sm: 0.75em,
+    base: 1em,
+    md: 1.5em,
+    lg: 2em,
+    xl: 2.5em,
+    xxl: 3em,
+    xxxl: 3.5em
+);
+
+//padding
+$pad: (
+    sm: 0.75em,
+    base: 1em,
+    md: 1.5em,
+    lg: 2em,
+    xl: 2.5em,
+    xxl: 4.5em,
+    xxxl: 5.5em
+);
+
+:root {
+    @each $name, $size in $mar {
+        --mar-#{$name}: #{$size};
+    }
+    @each $name, $size in $pad {
+        --pad-#{$name}: #{$size};
+    }
+}

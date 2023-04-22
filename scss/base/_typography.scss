@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+//font-family
+$ff: 'Kumbh Sans', sans-serif;
+
+//font-size
+$fs: (
+    xs: 0.6rem,
+    sm: 0.85rem,
+    base: 18px,
+    md: 1.25rem,
+    lg: 1.5rem,
+    xl: 1.75rem,
+    xxl: 2rem
+);
+
+//font-weight
+$fw: (
+    base: 400,
+    bold: 700
+);
+
+:root {
+    @each $name, $size in $fs {
+        --fs-#{$name}: #{$size};
+    }
+    @each $name, $weight in $fw {
+        --fw-#{$name}: #{$weight};
+    }
+};
