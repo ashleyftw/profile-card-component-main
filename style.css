@@ -105,17 +105,27 @@ body {
 }
 body .bg-top {
   position: absolute;
+  width: 30em;
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+body .bg-top img {
+  width: 95%;
+  height: 95%;
+}
 body .bg-bottom {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  width: 40em;
+  bottom: 0.2em;
+  right: -6em;
   transform: translate(50%, 50%);
   z-index: -1;
+}
+body .bg-bottom img {
+  width: 95%;
+  height: 95%;
 }
 
 .card {
@@ -130,9 +140,6 @@ body .bg-bottom {
 }
 .card h2, .card p {
   color: var(--primary-dk-gr-bl);
-}
-.card__profile {
-  padding: var(--pad-lg) var(--pad-xxxl);
 }
 .card__pic {
   background: url(images/bg-pattern-card.svg);
@@ -155,7 +162,7 @@ body .bg-bottom {
 .card__info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .card__info h1 {
   font-size: var(--fs-base);
@@ -182,4 +189,20 @@ body .bg-bottom {
   font-size: var(--fs-xs);
   letter-spacing: 0.1rem;
   font-weight: var(--fw-base);
+}
+
+@media (min-width: 750px) {
+  body .bg-top {
+    width: 60em;
+    top: 0;
+    left: 11em;
+  }
+  body .bg-bottom {
+    width: 60em;
+    bottom: -8em;
+    right: 12em;
+  }
+  .card__profile {
+    padding: var(--pad-xxl) 6.9em var(--pad-base);
+  }
 }/*# sourceMappingURL=style.css.map */
